@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1000.0" maxWidth="1602.0" minHeight="460.0" minWidth="539.0" prefHeight="776.0" prefWidth="539.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calc.Controller">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <TabPane prefHeight="677.0" prefWidth="594.0" tabClosingPolicy="UNAVAILABLE">
+    <tabs>
+      <Tab text="Calculator">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="594.0">
+            <children>
+
+              <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="593.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columnConstraints>
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" percentWidth="100.0" prefWidth="207.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" percentWidth="100.0" prefWidth="59.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" percentWidth="100.0" prefWidth="127.0" />
+                  <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" percentWidth="100.0" prefWidth="106.0" />
+                </columnConstraints>
+                <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                  <Button fx:id="SevenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SevenButtonClick" text="7" GridPane.rowIndex="6" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#FourButtonClick" text="4" GridPane.rowIndex="7" />
+                  <Button fx:id="EightButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#EightButtonClick" text="8" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#FiveButtonClick" text="5" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button fx:id="DelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#DelButton" text="/" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#OneButtonClick" text="1" GridPane.rowIndex="8" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TwoButtonClick" text="2" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Button fx:id="nineButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#NineButtonClick" text="9" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Button fx:id="MulButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#MulButtonClick" text="*" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Button fx:id="SubButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SubButtonClick" text="-" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SixButtonClick" text="6" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ThreeButtonClick" text="3" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Button fx:id="PlaceButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddButtonClick" text="+" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                  <Button fx:id="zeroButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ZeroButtonClick" text="0" GridPane.rowIndex="9" />
+                  <Button fx:id="dotButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dotButtonClick" text="." GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Button fx:id="ACButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ACButtonClick" text="AC" GridPane.rowIndex="2" />
+                  <Button fx:id="AtanButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AtanButtonClick" text="atan" GridPane.rowIndex="5" />
+                  <Button fx:id="ArcsinButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ArcsinButtonClick" text="arcsin" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button fx:id="SinButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SinButtonClick" text="sin" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="CosButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#CosButtonClick" text="cos" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="ArccosButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ArccosButtonClick" text="arccos" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="LogButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LogButtonClick" text="log" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button fx:id="LnButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LnButtonClick" text="ln" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button fx:id="PowButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PowButtonClick" text="^" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="PiButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PiButtonClick" prefWidth="150.0" text="E" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                  <Button fx:id="TanButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TanButtonClick" text="tan" GridPane.rowIndex="4" />
+                  <Button fx:id="DelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#DelButtonClick" text="del" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="proc" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#procClick" text="mod" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="LeftBracketButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LeftBracketButtonClick" text="(" GridPane.rowIndex="3" />
+                  <Button fx:id="RightBracketButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#RightBracketButtonClick" text=")" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="SqrtButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SqrtButtonClick" text="sqrt" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="EqualButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#EqualButtonClick" prefHeight="30.0" prefWidth="173.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="layerMenu" prefHeight="107.0" prefWidth="545.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                  <ListView fx:id="listViewHistory" prefHeight="107.0" prefWidth="545.0" GridPane.columnSpan="4">
+                    <GridPane.margin>
+                      <Insets right="50.0" />
+                    </GridPane.margin></ListView>
+                  <Button fx:id="XButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#XButtonClick" text="X" GridPane.rowIndex="10" />
+                  <TextField fx:id="TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+                  <Button fx:id="clear" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearClick" text="clear" GridPane.columnIndex="3">
+                    <GridPane.margin>
+                      <Insets left="75.0" />
+                    </GridPane.margin>
+                  </Button>
+                </children>
+              </GridPane>
+            </children>
+          </AnchorPane>
+        </content>
+      </Tab>
+      <Tab onSelectionChanged="#GraphButtonClick" text="Graf">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+              <LineChart fx:id="LineChart" layoutY="152.0" prefHeight="387.0" prefWidth="492.0">
+                <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+                </xAxis>
+                <yAxis>
+                  <NumberAxis side="LEFT" />
+                </yAxis>
+              </LineChart>
+              <Label fx:id="layerMenu1" layoutX="10.0" layoutY="14.0" prefHeight="107.0" prefWidth="480.0" />
+              <TextField fx:id="MinTextField" layoutX="32.0" layoutY="567.0" onAction="#TextChange" />
+              <TextField fx:id="MaxTextField" layoutX="316.0" layoutY="567.0" onAction="#TextChange" />
+            </children>
+          </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Help">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+              <Label layoutX="334.0" layoutY="14.0" prefHeight="76.0" prefWidth="142.0" />
+              <Text layoutX="43.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В случае, если строка ввода не содержит данных, история результатов будет автоматически очищена при нажатии кнопки &quot;равно&quot;." wrappingWidth="281.6865234375" />
+              <Text layoutX="43.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="При нажатии кнопки &quot;равно&quot; выражение сохраняется. При выборе строки из истории это значение автоматически восстанавливается в активной строке ввода." wrappingWidth="261.2158203125" />
+              <ImageView fitHeight="116.0" fitWidth="95.0" layoutX="343.0" layoutY="138.0">
+                <image>
+                  <Image url="@../../../Foto/Screenshot%202024-04-15%20at%2011.58.27.png" />
+                </image>
+              </ImageView>
+              <ImageView fitHeight="74.0" fitWidth="140.0" layoutX="343.0" layoutY="26.0">
+                <image>
+                  <Image url="@../../../Foto/Screenshot%202024-04-15%20at%2012.00.47.png" />
+                </image>
+              </ImageView>
+            </children>
+          </AnchorPane>
+        </content>
+      </Tab>
+    </tabs>
+  </TabPane>
+</VBox>
